@@ -6,7 +6,7 @@ This is my little driver, created just to show messages when it is installed and
 
 To compile this, we need to create a Makefile:
 
-'''Makefile
+
 obj-m += my_drive.o
 
 all:
@@ -14,9 +14,9 @@ all:
 
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-'''
 
-To install the driver, use the following command: **sudo insmod my_driver.ko**
+To install the driver, use the following command: **sudo insmod my_drive.ko**
+And for Remove driver **sudo rmmod my_drive**
 
 **BUT** in another terminal, you need to use the command **dmesg -W** to see the messages.
 
